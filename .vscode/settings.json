@@ -60,13 +60,13 @@
         "*.asset": "yaml",
         "*.meta": "yaml",
         "*.prefab": "yaml",
-        "*.unity": "yaml",
+        "*.unity": "yaml"
     },
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Factory Reset.slnx",
+    "dotnet.defaultSolution": "Factory-Reset-2026-10-20_19-12-36.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }
