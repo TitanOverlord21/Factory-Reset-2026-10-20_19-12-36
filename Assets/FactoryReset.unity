@@ -2304,7 +2304,7 @@ GameObject:
   - component: {fileID: 2141241378}
   - component: {fileID: 2141241377}
   m_Layer: 10
-  m_Name: Slope3 (1)
+  m_Name: Slope4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
