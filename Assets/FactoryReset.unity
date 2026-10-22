@@ -2193,8 +2193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0f63b2069f9554b98bfa2a4142e725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Eyes
-  sensX: 100
-  sensY: 100
+  sensX: 1000
+  sensY: 1000
   orientation: {fileID: 1091041041}
 --- !u!114 &1701087858
 MonoBehaviour:
