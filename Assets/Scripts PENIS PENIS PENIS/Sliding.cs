@@ -31,6 +31,8 @@ public class Sliding : MonoBehaviour
         cr = GetComponent<Character>();
 
         startYScale = playerObj.localScale.y;
+
+
     }
 
     void Update()

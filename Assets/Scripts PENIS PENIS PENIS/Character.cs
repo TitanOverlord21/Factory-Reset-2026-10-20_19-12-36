@@ -84,6 +84,8 @@ public class Character : MonoBehaviour
 
         startYScale = transform.localScale.y;
 
+        
+
     }
 
     private void Update()
