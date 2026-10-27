@@ -15,6 +15,7 @@ public class StairCode1 : MonoBehaviour
         int StairNumber = int.Parse(StairNumberWord.ToString());
         if (StairNumber != 1){
         StairNumber -= 1;
+        // The ratio of Y to Z has to stay with the slope. I should serialize a variable so that I can make that change scale off of, but whatever for now. .84 to 1 btw.
         RightYValue += (1.2585f * StairNumber);
         // Debug.Log(RightYValue + "is the y value");
         RightZValue -= (1.5f * StairNumber);
