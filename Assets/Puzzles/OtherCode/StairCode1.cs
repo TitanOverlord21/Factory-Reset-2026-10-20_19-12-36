@@ -48,6 +48,7 @@ public class StairCode1 : MonoBehaviour
         if (TargetStruck == NameOfStair){
             //go in the right place
         transform.localPosition = new Vector3(0.0f, RightYValue, RightZValue);
+        this.transform.eulerAngles = new Vector3(10,0,0);
         }
     }
 }
