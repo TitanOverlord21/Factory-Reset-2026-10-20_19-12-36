@@ -638,7 +638,7 @@ MonoBehaviour:
   sprintSpeed: 10
   slideSpeed: 30
   groundDrag: 5
-  jumpForce: 3
+  jumpForce: 4
   jumpCooldown: 0.01
   airMultiplier: 0.4
   crouchSpeed: 3.5
