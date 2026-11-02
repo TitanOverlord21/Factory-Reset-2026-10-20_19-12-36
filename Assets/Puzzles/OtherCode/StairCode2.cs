@@ -15,18 +15,18 @@ public class StairCode2 : MonoBehaviour
     }
     private void OnEnable()
     {
-        StairsForNow.StairFixed2 += FixSelf2;
+        // StairsForNow.StairFixed2 += FixSelf2;
         Eyes.Interacted += GoInRightPlace;
     }
     private void OnDisable()
     {
-        StairsForNow.StairFixed2 -= FixSelf2;
+        // StairsForNow.StairFixed2 -= FixSelf2;
         Eyes.Interacted -= GoInRightPlace;
     }
-    private void FixSelf2()
-    {
-        transform.localPosition = new Vector3(1.0f, 3.9f, 7.4f);
-    }
+    // private void FixSelf2()
+    // {
+    //     transform.localPosition = new Vector3(1.0f, 3.9f, 7.4f);
+    // }
 
     private void GoInRightPlace(string TargetStruck)
     {

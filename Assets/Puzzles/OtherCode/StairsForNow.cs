@@ -8,23 +8,23 @@ public class StairsForNow : MonoBehaviour
     {
 
     }
-    public static event Action StairFixed1;
-    public static event Action StairFixed2;
-    public static event Action StairFixed3;
+    // public static event Action StairFixed1;
+    // public static event Action StairFixed2;
+    // public static event Action StairFixed3;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            StairFixed1?.Invoke();
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            StairFixed2?.Invoke();
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            StairFixed3?.Invoke();
-        }
+        // if (Input.GetKeyDown(KeyCode.Alpha1))
+        // {
+        //     StairFixed1?.Invoke();
+        // }
+        // else if (Input.GetKeyDown(KeyCode.Alpha2))
+        // {
+        //     StairFixed2?.Invoke();
+        // }
+        // else if (Input.GetKeyDown(KeyCode.Alpha3))
+        // {
+        //     StairFixed3?.Invoke();
+        // }
     }
 }

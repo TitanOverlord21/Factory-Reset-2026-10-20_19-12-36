@@ -7,6 +7,15 @@ public class Character : MonoBehaviour
 {
 
 
+    //Adam doesn't know wtf the header stuff is and putting my things here
+    
+    [SerializeField] private AudioSource JumpSoundSource;
+    [SerializeField] private AudioSource GloveOnSoundSource;
+    [SerializeField] private AudioSource LandingSoundSource;//Doesn't play right now
+
+
+
+    //Adam done with sounds
     [Header("Movement")]
     private float moveSpeed;
     public float walkSpeed;
@@ -98,6 +107,7 @@ public class Character : MonoBehaviour
         
         if (grounded)
         {
+            
             rb.linearDamping = groundDrag;
             Invoke(nameof(ResetJump), jumpCooldown);
 
@@ -127,7 +137,7 @@ public class Character : MonoBehaviour
         if(Input.GetKey(jumpKey) && readyToJump)
         {
             readyToJump = false;
-            
+            JumpSoundSource.Play();
             Jump();
 
             //Invoke(nameof(ResetJump), jumpCooldown);
@@ -299,6 +309,7 @@ public class Character : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+
     }
 
 

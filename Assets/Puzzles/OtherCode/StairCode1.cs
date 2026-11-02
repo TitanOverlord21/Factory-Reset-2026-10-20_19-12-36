@@ -1,7 +1,12 @@
 using UnityEngine;
+using System;
 
 public class StairCode1 : MonoBehaviour
 {
+
+    [SerializeField] private AudioSource StairPickUpSound;
+    // [SerializeField] private AudioSource StairRepairpSound;
+
     private string NameOfStair;
     // private float RightXValue = 0.0f;
     private float RightYValue = 3.0f;
@@ -50,6 +55,7 @@ public class StairCode1 : MonoBehaviour
             //go in the right place
         transform.localPosition = new Vector3(0.0f, RightYValue, RightZValue);
         this.transform.eulerAngles = new Vector3(10,0,0);
+        StairPickUpSound.Play();
         }
     }
 }
