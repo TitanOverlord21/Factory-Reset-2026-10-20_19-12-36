@@ -24,7 +24,6 @@ public class DoorScript : MonoBehaviour
         GlovesScript.GlovesOn -= OpenDaDoor;
     }
     private void OpenDaDoor(){
-        // this.transform.eulerAngles = new Vector3(0,90,0);
-        transform.localPosition = new Vector3(19.6200008f,0.870000005f,-5.96400023f - 3f);
+        this.transform.eulerAngles = new Vector3(0,90,0);
     }
 }
