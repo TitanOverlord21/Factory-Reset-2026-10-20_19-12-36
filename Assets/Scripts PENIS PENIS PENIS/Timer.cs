@@ -14,7 +14,20 @@ public class Timer : MonoBehaviour
     private Vector3 StartPosition2;
     public bool Frozen = false;
 
+            private void OnEnable()
+    {
+        // StairsForNow.StairFixed1 += FixSelf1;
+        GlovesScript.GlovesOn += MakeTimerLonger;
+    }
+    private void OnDisable()
+    {
+        // StairsForNow.StairFixed1 -= FixSelf1;
+        GlovesScript.GlovesOn -= MakeTimerLonger;
+    }
 
+    private void MakeTimerLonger(){
+        CountdownMax = 30;
+    }
     // This script handles the timer in its entirety, everything to do with it will happen here.
 
 
