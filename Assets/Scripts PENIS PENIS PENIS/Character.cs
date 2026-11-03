@@ -53,7 +53,7 @@ public class Character : MonoBehaviour
     [Header("Ground Check")]
     public float playerHeight;
     public LayerMask whatIsGround;
-    bool grounded;
+    public bool grounded;
 
     [Header("Slope Handling")]
     public float maxSlopeAngle;
@@ -134,6 +134,9 @@ public class Character : MonoBehaviour
 
 
         // jump stuff
+
+
+        ResetJump();
         if(Input.GetKey(jumpKey) && readyToJump)
         {
             // if (grounded){
