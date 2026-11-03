@@ -136,9 +136,9 @@ public class Character : MonoBehaviour
         // jump stuff
         if(Input.GetKey(jumpKey) && readyToJump)
         {
-            if (grounded){
-                Debug.Log("Should jump");
-            }
+            // if (grounded){
+            //     Debug.Log("Should jump");
+            // }
             readyToJump = false;
             JumpSoundSource.Play();
             Jump();
