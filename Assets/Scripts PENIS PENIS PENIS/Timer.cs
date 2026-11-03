@@ -69,8 +69,15 @@ public class Timer : MonoBehaviour
         Frozen = true;
 
 
+        StartLoop();
 
 
 
     }
+    // This is Adam's fuckass event code that sucks shit
+    // Use this for the recording and try not to let this infect anything.
+    // 
+    
+
+
 }
