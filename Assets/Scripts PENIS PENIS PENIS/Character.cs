@@ -138,7 +138,7 @@ public class Character : MonoBehaviour
         // ResetJump() being here lets you jump infinitely, erase it to put the limit back on.
   
         ResetJump();
-        if(Input.GetKey(jumpKey) && readyToJump)
+        if(Input.GetKeyDown(jumpKey) && readyToJump)
         {
             // if (grounded){
             //     Debug.Log("Should jump");
