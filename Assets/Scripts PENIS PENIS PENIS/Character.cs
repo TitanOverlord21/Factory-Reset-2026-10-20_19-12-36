@@ -8,7 +8,7 @@ public class Character : MonoBehaviour
 
 
     //Adam doesn't know wtf the header stuff is and putting my things here
-    
+    [Header("Sound")]
     [SerializeField] private AudioSource JumpSoundSource;
     [SerializeField] private AudioSource GloveOnSoundSource;
     [SerializeField] private AudioSource LandingSoundSource;//Doesn't play right now
@@ -30,9 +30,8 @@ public class Character : MonoBehaviour
     public float groundDrag;
 
     public float jumpForce;
-    public float jumpCooldown;
     public float airMultiplier;
-    bool readyToJump;
+    private bool readyToJump;
 
     [Header("Crouching")]
     public float crouchSpeed;
@@ -54,6 +53,7 @@ public class Character : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     public bool grounded;
+    private int zeroCounter = 0;
 
     [Header("Slope Handling")]
     public float maxSlopeAngle;
@@ -109,12 +109,14 @@ public class Character : MonoBehaviour
         {
             
             rb.linearDamping = groundDrag;
-            Invoke(nameof(ResetJump), jumpCooldown);
+            ResetJump();
+
 
         }
         else
         {
             rb.linearDamping = 0;
+            readyToJump = false;
         }
 
 
@@ -124,6 +126,25 @@ public class Character : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+        if (Mathf.Approximately(rb.linearVelocity.y, 0f))
+        {
+            if(zeroCounter < 10)
+            {
+                zeroCounter++;
+            }
+
+            if(zeroCounter >= 10) {
+
+                readyToJump = true;
+            }
+
+        }
+        else
+        {
+            zeroCounter = 0;
+        }
+
+
     }
 
     private void MyInput()
@@ -135,9 +156,7 @@ public class Character : MonoBehaviour
 
         // jump stuff
 
-        // ResetJump() being here lets you jump infinitely, erase it to put the limit back on.
-  
-        ResetJump();
+        
         if(Input.GetKeyDown(jumpKey) && readyToJump)
         {
             // if (grounded){
@@ -315,8 +334,10 @@ public class Character : MonoBehaviour
 
     private void ResetJump()
     {
-        readyToJump = true;
-
+        if (grounded)
+        {
+            readyToJump = true;
+        }
     }
 
 
