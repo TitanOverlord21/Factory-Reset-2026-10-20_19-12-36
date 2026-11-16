@@ -377,7 +377,7 @@ Transform:
   m_GameObject: {fileID: 73769344}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2666664, y: 0.097, z: -0.4557146}
+  m_LocalPosition: {x: -0.2666664, y: -0.1029999, z: -0.4557146}
   m_LocalScale: {x: 0.21883333, y: 0.164125, z: 0.46892852}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -516,7 +516,7 @@ Transform:
   m_GameObject: {fileID: 125401046}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.26666707, y: -0.102999926, z: -0.4557146}
+  m_LocalPosition: {x: 0.26666707, y: 0.097, z: -0.4557146}
   m_LocalScale: {x: 0.21883333, y: 0.164125, z: 0.46892852}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1617,7 +1617,7 @@ Transform:
   m_GameObject: {fileID: 426632226}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2666664, y: -0.102999926, z: -0.4557146}
+  m_LocalPosition: {x: -0.2666664, y: 0.097, z: -0.4557146}
   m_LocalScale: {x: 0.21883333, y: 0.164125, z: 0.46892852}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2123,7 +2123,7 @@ Transform:
   m_GameObject: {fileID: 528403808}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.26666707, y: 0.097, z: -0.4557146}
+  m_LocalPosition: {x: 0.26666707, y: -0.1029999, z: -0.4557146}
   m_LocalScale: {x: 0.21883333, y: 0.164125, z: 0.46892852}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5141,7 +5141,7 @@ Transform:
   m_GameObject: {fileID: 1645392303}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.097, z: -0.4557146}
+  m_LocalPosition: {x: 0, y: -0.1029999, z: -0.4557146}
   m_LocalScale: {x: 0.21883333, y: 0.164125, z: 0.46892852}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5642,7 +5642,7 @@ Transform:
   m_GameObject: {fileID: 1854254996}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.102999926, z: -0.4557146}
+  m_LocalPosition: {x: 0, y: 0.097, z: -0.4557146}
   m_LocalScale: {x: 0.21883333, y: 0.164125, z: 0.46892852}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5660,6 +5660,7 @@ GameObject:
   - component: {fileID: 1936740885}
   - component: {fileID: 1936740884}
   - component: {fileID: 1936740883}
+  - component: {fileID: 1936740887}
   m_Layer: 0
   m_Name: KeyPad
   m_TagString: Untagged
@@ -5772,6 +5773,19 @@ Transform:
   - {fileID: 1097309906}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1936740887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936740882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d51fad1da9461ac4abee44b5c5eec312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyPadScript
+  CorrectCode: 05000000080000000900000003000000
 --- !u!1 &1956517333
 GameObject:
   m_ObjectHideFlags: 0
