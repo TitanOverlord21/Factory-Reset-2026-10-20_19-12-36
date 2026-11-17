@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -7,15 +8,12 @@ public class Character : MonoBehaviour
 {
 
 
-    //Adam doesn't know wtf the header stuff is and putting my things here
     [Header("Sound")]
     [SerializeField] private AudioSource JumpSoundSource;
     [SerializeField] private AudioSource GloveOnSoundSource;
-    [SerializeField] private AudioSource LandingSoundSource;//Doesn't play right now
+    [SerializeField] private AudioSource LandingSoundSource;
 
 
-
-    //Adam done with sounds
     [Header("Movement")]
     private float moveSpeed;
     public float walkSpeed;
@@ -33,11 +31,12 @@ public class Character : MonoBehaviour
     public float airMultiplier;
     private bool readyToJump;
 
-    [Header("Crouching")]
+    [Header("Size")]
     public float crouchSpeed;
     public float crouchYScale;
     private float startYScale;
 
+    public bool youSmallNow = false;
 
 
 
@@ -184,6 +183,36 @@ public class Character : MonoBehaviour
 
         }
 
+        // debug shrink
+
+        if( Input.GetKeyDown(KeyCode.G))
+        {
+
+            ShrinkPlayer();
+        }
+
+    }
+
+    public void ShrinkPlayer()
+    {
+
+        if (youSmallNow)
+        {
+            youSmallNow = false;
+            crouchYScale *= 5;
+            startYScale *= 5;
+            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+
+        }
+
+        else
+        {
+            youSmallNow = true;
+            crouchYScale /= 5;
+            startYScale /= 5;
+            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+
+        }
     }
 
 
