@@ -58,7 +58,7 @@ public class Character : MonoBehaviour
     public float maxSlopeAngle;
     private RaycastHit slopeHit;
 
-
+    public bool PlayerFrozen;
     public Transform orientation;
 
     float horizontalInput;
@@ -67,6 +67,7 @@ public class Character : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
+    [SerializeField] GameObject pod;
 
     public MovementState state;
 
@@ -83,8 +84,11 @@ public class Character : MonoBehaviour
 
 
 
+
     private void Start()
     {
+
+        PlayerFrozen = true;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     
@@ -92,13 +96,16 @@ public class Character : MonoBehaviour
 
         startYScale = transform.localScale.y;
 
-        
 
     }
 
     private void Update()
     {
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.7f * transform.localScale.y, whatIsGround);
+
+        
+
+
+            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.7f * transform.localScale.y, whatIsGround);
 
         MyInput();
         SpeedControl();
@@ -192,7 +199,7 @@ public class Character : MonoBehaviour
         }
 
     }
-
+    
     public void ShrinkPlayer()
     {
 
