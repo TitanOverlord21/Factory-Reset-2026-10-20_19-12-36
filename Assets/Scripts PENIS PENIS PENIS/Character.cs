@@ -12,10 +12,14 @@ public class Character : MonoBehaviour
     [SerializeField] private AudioSource JumpSoundSource;
     [SerializeField] private AudioSource GloveOnSoundSource;
     [SerializeField] private AudioSource LandingSoundSource;//Doesn't play right now
-
-
-
     //Adam done with sounds
+    public static event Action CanBreakWalls;
+    private void OnTriggerEnter(Collider other){
+        if (other.gameObject.name == "WallBreakPowerUp"){
+            CanBreakWalls?.Invoke();
+        }
+    }
+    //Adam done
     [Header("Movement")]
     private float moveSpeed;
     public float walkSpeed;
