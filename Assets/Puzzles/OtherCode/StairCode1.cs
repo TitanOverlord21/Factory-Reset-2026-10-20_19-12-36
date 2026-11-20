@@ -55,7 +55,10 @@ public class StairCode1 : MonoBehaviour
             //go in the right place
         transform.localPosition = new Vector3(0.0f, RightYValue, RightZValue);
         this.transform.eulerAngles = new Vector3(10,0,0);
-        // StairPickUpSound.Play(); SHOULD EXIST BUT JUST 4 NOW
+            // StairPickUpSound.Play(); SHOULD EXIST BUT JUST 4 NOW
+
+            gameObject.layer = LayerMask.NameToLayer("whatIsGround");
+
         }
     }
 }

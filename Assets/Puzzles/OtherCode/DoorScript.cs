@@ -23,8 +23,9 @@ public class DoorScript : MonoBehaviour
         // StairsForNow.StairFixed1 -= FixSelf1;
         GlovesScript.GlovesOn -= OpenDaDoor;
     }
+    
     private void OpenDaDoor(){
         // this.transform.eulerAngles = new Vector3(0,90,0);
-        transform.localPosition = new Vector3(19.6200008f,0.870000005f,-5.96400023f - 3f);
+        transform.localPosition = new Vector3(16.8999996f,0.899999976f,74f);
     }
 }

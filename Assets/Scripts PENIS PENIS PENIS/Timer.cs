@@ -69,8 +69,28 @@ public class Timer : MonoBehaviour
         Frozen = true;
 
 
+        StartLoop();
 
 
 
+    }
+
+    // This is Adam's code
+    // Don't let this stick around too long.
+
+    private void OnEnable()
+    {
+        // StairsForNow.StairFixed1 += FixSelf1;
+        GlovesScript.GlovesOn += MakeTimerLonger;
+    }
+    private void OnDisable()
+    {
+        // StairsForNow.StairFixed1 -= FixSelf1;
+        GlovesScript.GlovesOn -= MakeTimerLonger;
+    }
+
+    private void MakeTimerLonger()
+    {
+        CountdownMax = 30;
     }
 }
