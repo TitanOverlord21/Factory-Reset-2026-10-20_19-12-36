@@ -12,8 +12,10 @@ public class Timer : MonoBehaviour
 
     private Vector3 StartPosition1;
     private Vector3 StartPosition2;
-    public bool Frozen = false;
+    public bool Frozen = true;
+    Rigidbody rb;
 
+    [SerializeField] public GameObject Pod;
 
     // This script handles the timer in its entirety, everything to do with it will happen here.
 
@@ -23,8 +25,9 @@ public class Timer : MonoBehaviour
     {
         StartPosition1 = Player.transform.position;
         StartPosition2 = CameraHolder.transform.position;
+        rb = Player.GetComponent<Rigidbody>();
 
-        
+        Loop();
     }
 
     void Update()
@@ -53,8 +56,11 @@ public class Timer : MonoBehaviour
     {
         Countdown = CountdownMax;
         Frozen = false;
-
+        rb.constraints = ~RigidbodyConstraints.FreezePosition;
         // Pass something to open the player respawn pod
+        Debug.Log("Loop Start");
+        Pod.SetActive(false);
+
     }
 
 
@@ -68,15 +74,19 @@ public class Timer : MonoBehaviour
 
         Frozen = true;
 
+        rb.constraints = RigidbodyConstraints.FreezePosition;
 
-        StartLoop();
+        Debug.Log("Loop End");
+        Pod.SetActive(true);
+
+
+        //StartLoop();
 
 
 
     }
 
     // This is Adam's code
-    // Don't let this stick around too long.
 
     private void OnEnable()
     {
