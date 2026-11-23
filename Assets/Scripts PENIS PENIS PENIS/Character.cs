@@ -48,6 +48,8 @@ public class Character : MonoBehaviour
 
     [Header("Keybinds")]
 
+
+    
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode sprintKey = KeyCode.LeftShift;
     public KeyCode crouchKey = KeyCode.LeftControl;
@@ -161,6 +163,7 @@ public class Character : MonoBehaviour
 
     private void MyInput()
     {
+
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 

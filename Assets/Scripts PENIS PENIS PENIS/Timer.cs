@@ -30,9 +30,10 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI num_attempts;
     
     public RawImage reticle;
+    public RawImage background;
 
     public RawImage keyBinds;
-    public RawImage notePad;
+    public Image notePad;
 
 
 
@@ -72,12 +73,15 @@ public class Timer : MonoBehaviour
             }
         }
 
-        else if(Input.GetKeyDown(KeyCode.R))
+        
+
+
+
+
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            StartLoop();
+            CloseMenu();
         }
-
-
 
     }
 
@@ -125,6 +129,9 @@ public class Timer : MonoBehaviour
     public void NotePad()
     {
         notePad.enabled = true;
+        background.enabled = true;
+
+
     }
 
 
@@ -132,7 +139,9 @@ public class Timer : MonoBehaviour
 
     {
         keyBinds.enabled = true;
-        // Make a keylistener
+        background.enabled= true;
+    
+    
     }
 
 
@@ -143,6 +152,8 @@ public class Timer : MonoBehaviour
 
         notePad.enabled = false;
         keyBinds.enabled = false;
+        background.enabled = false;
+
 
 
     }
