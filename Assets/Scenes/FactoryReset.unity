@@ -4202,6 +4202,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 645840361902236475, guid: 011792a476144df4c8c66767cd712ff8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: eb79ec0657b7d6c48942befc5d7b2c37, type: 2}
     - target: {fileID: 1418346423882378228, guid: 011792a476144df4c8c66767cd712ff8, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -4210,6 +4214,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f2506252823082947ac9c5bd934e0ba4, type: 2}
+    - target: {fileID: 1795121139755376435, guid: 011792a476144df4c8c66767cd712ff8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: eb79ec0657b7d6c48942befc5d7b2c37, type: 2}
     - target: {fileID: 4145963085493446199, guid: 011792a476144df4c8c66767cd712ff8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -4234,6 +4242,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.0023
       objectReference: {fileID: 0}
+    - target: {fileID: 6544729123657650082, guid: 011792a476144df4c8c66767cd712ff8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: eb79ec0657b7d6c48942befc5d7b2c37, type: 2}
     - target: {fileID: 6863711080078596011, guid: 011792a476144df4c8c66767cd712ff8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -4278,6 +4290,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7445640245526704187, guid: 011792a476144df4c8c66767cd712ff8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: eb79ec0657b7d6c48942befc5d7b2c37, type: 2}
     - target: {fileID: 7980847853647852120, guid: 011792a476144df4c8c66767cd712ff8, type: 3}
       propertyPath: m_Name
       value: Hallway_Corridor (2)
@@ -4286,6 +4302,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: aa382976d563168409ce37158855f22a, type: 2}
+    - target: {fileID: 8391665359593580546, guid: 011792a476144df4c8c66767cd712ff8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: eb79ec0657b7d6c48942befc5d7b2c37, type: 2}
+    - target: {fileID: 9059205993581372505, guid: 011792a476144df4c8c66767cd712ff8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: eb79ec0657b7d6c48942befc5d7b2c37, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
