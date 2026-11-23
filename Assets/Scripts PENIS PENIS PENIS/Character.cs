@@ -140,12 +140,12 @@ public class Character : MonoBehaviour
         MovePlayer();
         if (Mathf.Approximately(rb.linearVelocity.y, 0f))
         {
-            if(zeroCounter < 10)
+            if(zeroCounter < 3)
             {
                 zeroCounter++;
             }
 
-            if(zeroCounter >= 10) {
+            if(zeroCounter >= 3) {
 
                 readyToJump = true;
             }
