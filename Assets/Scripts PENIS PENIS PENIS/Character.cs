@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -7,7 +8,6 @@ public class Character : MonoBehaviour
 {
 
 
-    //Adam doesn't know wtf the header stuff is and putting my things here
     [Header("Sound")]
     [SerializeField] private AudioSource JumpSoundSource;
     [SerializeField] private AudioSource GloveOnSoundSource;
@@ -37,11 +37,12 @@ public class Character : MonoBehaviour
     public float airMultiplier;
     private bool readyToJump;
 
-    [Header("Crouching")]
+    [Header("Size")]
     public float crouchSpeed;
     public float crouchYScale;
     private float startYScale;
 
+    public bool youSmallNow = false;
 
 
 
@@ -63,7 +64,7 @@ public class Character : MonoBehaviour
     public float maxSlopeAngle;
     private RaycastHit slopeHit;
 
-
+    public bool PlayerFrozen;
     public Transform orientation;
 
     float horizontalInput;
@@ -72,6 +73,7 @@ public class Character : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
+    [SerializeField] GameObject pod;
 
     public MovementState state;
 
@@ -88,8 +90,11 @@ public class Character : MonoBehaviour
 
 
 
+
     private void Start()
     {
+
+        PlayerFrozen = true;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     
@@ -97,13 +102,16 @@ public class Character : MonoBehaviour
 
         startYScale = transform.localScale.y;
 
-        
 
     }
 
     private void Update()
     {
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.7f * transform.localScale.y, whatIsGround);
+
+        
+
+
+            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.7f * transform.localScale.y, whatIsGround);
 
         MyInput();
         SpeedControl();
@@ -188,6 +196,36 @@ public class Character : MonoBehaviour
 
         }
 
+        // debug shrink
+
+        if( Input.GetKeyDown(KeyCode.G))
+        {
+
+            ShrinkPlayer();
+        }
+
+    }
+    
+    public void ShrinkPlayer()
+    {
+
+        if (youSmallNow)
+        {
+            youSmallNow = false;
+            crouchYScale *= 5;
+            startYScale *= 5;
+            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+
+        }
+
+        else
+        {
+            youSmallNow = true;
+            crouchYScale /= 5;
+            startYScale /= 5;
+            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+
+        }
     }
 
 
