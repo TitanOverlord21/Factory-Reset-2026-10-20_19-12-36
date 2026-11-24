@@ -78,7 +78,7 @@ public class KeyPadScript : MonoBehaviour
         if (CodeEntered[1] == CorrectCode[1]){
             if (CodeEntered[2] == CorrectCode[2]){
                 if (CodeEntered[3] == CorrectCode[3]){
-        Debug.Log("This is where it does something for the right code");
+        Destroy(gameObject);
     }   
     }
     }
