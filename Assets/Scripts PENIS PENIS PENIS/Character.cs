@@ -48,8 +48,6 @@ public class Character : MonoBehaviour
 
     [Header("Keybinds")]
 
-
-    
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode sprintKey = KeyCode.LeftShift;
     public KeyCode crouchKey = KeyCode.LeftControl;
@@ -142,12 +140,12 @@ public class Character : MonoBehaviour
         MovePlayer();
         if (Mathf.Approximately(rb.linearVelocity.y, 0f))
         {
-            if(zeroCounter < 3)
+            if(zeroCounter < 10)
             {
                 zeroCounter++;
             }
 
-            if(zeroCounter >= 3) {
+            if(zeroCounter >= 10) {
 
                 readyToJump = true;
             }
@@ -163,7 +161,6 @@ public class Character : MonoBehaviour
 
     private void MyInput()
     {
-
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
