@@ -4238,6 +4238,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4054803718152183385, guid: 059d1e41eae0a2c4faf03b642809e6cd, type: 3}
   m_PrefabInstance: {fileID: 659317694}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &680942220
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6e739f12e09735949875a0d2ee61ee01, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.176987
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e739f12e09735949875a0d2ee61ee01, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.84999996
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e739f12e09735949875a0d2ee61ee01, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 84.50332
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e739f12e09735949875a0d2ee61ee01, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e739f12e09735949875a0d2ee61ee01, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e739f12e09735949875a0d2ee61ee01, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e739f12e09735949875a0d2ee61ee01, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e739f12e09735949875a0d2ee61ee01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e739f12e09735949875a0d2ee61ee01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6e739f12e09735949875a0d2ee61ee01, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6e739f12e09735949875a0d2ee61ee01, type: 3}
+      propertyPath: m_Name
+      value: STAND IN GLOVES
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6e739f12e09735949875a0d2ee61ee01, type: 3}
 --- !u!1 &688617965 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2839284027925492741, guid: 23b8b74a3d8354d4b882eccf0ddee349, type: 3}
@@ -11914,3 +11971,5 @@ SceneRoots:
   - {fileID: 499266672}
   - {fileID: 237793900}
   - {fileID: 608703607}
+  - {fileID: 1490018343}
+  - {fileID: 680942220}
