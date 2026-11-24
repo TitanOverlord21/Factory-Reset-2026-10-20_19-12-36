@@ -13,6 +13,8 @@ public class Eyes : MonoBehaviour
     float xRotation;
     float yRotation;
 
+    public KeyCode Interact = KeyCode.E;
+
 //A camera exists
     private Camera DaCamera;     
 //Interact event
@@ -44,8 +46,7 @@ public class Eyes : MonoBehaviour
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
 
         //Checking for interact
-        if (Input.GetKeyDown(KeyCode.E)){
-            // Debug.Log ("Ya pressed E, Bukko");
+        if (Input.GetKeyDown(Interact)){
             ShootInteractBeam();
         };
     }
